@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="pfthankyou" translate="label" sortOrder="100">
+            <label>PF</label>
+        </tab>
+        <section id="thankyou" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Thank You Page Configuration</label>
+            <tab>pfthankyou</tab>
+            <resource>PF_ThankYou::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field id="contact_url" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Contact Page</label>
+                    <comment>Select the thank you page.</comment>
+                    <source_model>PF\ThankYou\Model\Config\Source\CmsPages</source_model>
+                </field>
+              	<field id="newsletter_url" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Newsletter Page</label>
+                    <comment>Select the thank you page.</comment>
+                    <source_model>PF\ThankYou\Model\Config\Source\CmsPages</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
